@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Poppins - Google Fonts
+@mixin poppins($weight: "regular", $style: "normal") {
+    font-family: "Poppins", sans-serif;
+    font-size: $style;
+
+    // Font size
+    @if $weight =="thin" {
+        font-weight: 100;
+    }
+
+    @else if $weight =="extralight" {
+        font-weight: 200;
+    }
+
+    @else if $weight =="light" {
+        font-weight: 300;
+    }
+
+    @else if $weight =="regular" {
+        font-weight: 400;
+    }
+
+    @else if $weight =="medium" {
+        font-weight: 500;
+    }
+
+    @else if $weight =="semibold" {
+        font-weight: 600;
+    }
+
+    @else if $weight =="bold" {
+        font-weight: 700;
+    }
+
+    @else if $weight =="extrabold" {
+        font-weight: 800;
+    }
+
+    @else if $weight =="black" {
+        font-weight: 900;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    // Convert to flexbox
+    display: flex;
+    // Position items vertically
+    flex-direction: column;
+    // Space out contents
+    justify-content: space-between;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+.poppins- {
+    font-family: "Poppins", sans-serif;
+
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}

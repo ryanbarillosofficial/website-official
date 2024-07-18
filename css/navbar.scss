@@ -1,0 +1,53 @@
+// @use imports
+@use "./global" as global;
+
+// Variables, Modules & Mixins
+$sizePadding: 1rem;
+$sizeName : 30px;
+
+/*
+Reference(s):
+- https://youtu.be/PwWHL3RyQgk?si=V-Lax5dIxIbxD7WI
+*/
+
+.navbar {
+    // Background & text colors
+    background-color: black;
+    color: hsl(0, 0%, 100%);
+
+    // Flexbox properties
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 2%;
+    flex-direction: row;
+
+    // Link Properties - Apply on both name title & page buttons
+    a {
+        &:visited, &:link, &:hover, &:active {
+            color: white;
+            text-decoration: none;
+            @include global.poppins("regular");
+        }
+    }
+
+    // Name Title
+    #name {
+        font-size: $sizeName;
+    }
+
+    // Link texts & buttons
+    #links {
+        list-style: none;
+
+        li,
+        a {
+            font-size: calc($sizeName - 10px);
+        }
+
+        li {
+            display: inline-block;
+            padding: 0 $sizePadding;
+        }
+    }
+}
