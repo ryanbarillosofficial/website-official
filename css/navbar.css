@@ -1,3 +1,13 @@
+/*
+Navigation Bar
+
+Reference(s):
+- https://youtu.be/PwWHL3RyQgk?si=V-Lax5dIxIbxD7WI
+- https://youtu.be/dPHNrNgM8jI?si=TtWs_gxAgq-NTW-N
+*/
+/*
+    Variables, Modules & Mixins
+*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: 0;
@@ -5,102 +15,59 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: hsl(0, 0%, 90%);
 }
 
 .main-content {
-  flex-grow: 1;
-}
-
-.poppins- {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
+  height: calc(100% - 60px);
+  padding: 0 2vw;
 }
 
 /*
-Reference(s):
-- https://youtu.be/PwWHL3RyQgk?si=V-Lax5dIxIbxD7WI
-*/
+ Navigation Bar
+ */
 .navbar {
   background-color: black;
-  color: hsl(0, 0%, 100%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 2%;
-  flex-direction: row;
+  height: 60px;
+  padding: 0 2vw;
 }
-.navbar a:visited, .navbar a:link, .navbar a:hover, .navbar a:active {
+.navbar * {
   color: white;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-size: "normal";
   font-weight: 400;
 }
-.navbar #name {
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.navbar .container #name {
   font-size: 30px;
 }
-.navbar #links {
+.navbar .container #links {
   list-style: none;
-}
-.navbar #links li,
-.navbar #links a {
+  overflow: hidden;
   font-size: 20px;
 }
-.navbar #links li {
+.navbar .container #links li {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 10px;
+  /*
+  Add spacing to the right of each button
+  ensure the last has no spacing; the navbar already has spacing,
+  and no additional spacing required
+  */
+}
+.navbar .container #links li:hover {
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 20%);
+}
+.navbar .container #links li:active {
+  color: black;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 100%);
 }/*# sourceMappingURL=navbar.css.map */
