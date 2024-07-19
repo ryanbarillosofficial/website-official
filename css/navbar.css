@@ -22,6 +22,11 @@ body {
   height: calc(100% - 60px);
   padding: 0 2vw;
 }
+.main-content * {
+  font-family: "Poppins", sans-serif;
+  font-size: "normal";
+  font-weight: 400;
+}
 
 /*
  Navigation Bar
@@ -34,9 +39,6 @@ body {
 .navbar * {
   color: white;
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-size: "normal";
-  font-weight: 400;
 }
 .navbar .container {
   display: flex;
@@ -46,28 +48,40 @@ body {
 }
 .navbar .container #name {
   font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: "normal";
+  font-weight: 600;
 }
-.navbar .container #links {
+.navbar .container .link {
   list-style: none;
   overflow: hidden;
   font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: "normal";
+  font-weight: 400;
 }
-.navbar .container #links li {
+.navbar .container .link li {
   display: inline-block;
   padding: 10px;
-  /*
-  Add spacing to the right of each button
-  ensure the last has no spacing; the navbar already has spacing,
-  and no additional spacing required
-  */
 }
-.navbar .container #links li:hover {
+.navbar .container .link li:hover {
   border-radius: 5px;
   background-color: hsl(0, 0%, 20%);
 }
-.navbar .container #links li:active {
+.navbar .container .link li:active {
   color: black;
   border-radius: 5px;
   background-color: hsl(0, 0%, 100%);
-  border-color: hsl(0, 0%, 100%);
+}
+.navbar .container .link #active {
+  color: black;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+}
+.navbar .container .link #active:hover {
+  background-color: hsl(0, 0%, 70%);
+}
+.navbar .container .link #active:active {
+  color: white;
+  background-color: hsl(0, 0%, 40%);
 }/*# sourceMappingURL=navbar.css.map */

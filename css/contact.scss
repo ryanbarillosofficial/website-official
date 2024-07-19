@@ -1,0 +1,30 @@
+/*
+Contact Page
+*/
+
+// @use imports
+@use "./global" as global;
+
+.flex-container {
+    // Flexbox properties
+    display: flex;
+    align-items: center;
+
+    &#row {
+        flex-direction: row;
+    }
+    &#col {
+        flex-direction: column;
+    }
+}
+
+.flex-item {
+    border: 5px solid hsl(0, 0%, 30%);
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.link-contact {
+    list-style: none;
+    
+}

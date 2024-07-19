@@ -69,4 +69,8 @@ body {
 .main-content {
     height: calc(100% - $navbarHeight);
     @include spacingLeftRight();
+    // Enforce Font on all elements
+    * {
+        @include poppins();
+    }
 }

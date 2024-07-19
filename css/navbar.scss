@@ -16,12 +16,10 @@ Reference(s):
 
     @if $state =="hover" {
         background-color: hsl(0, 0%, 20%);
-        // border-color: hsl(0, 0%, 20%);
     }
 
     @else if $state =="active" {
         background-color: hsl(0, 0%, 100%);
-        border-color: hsl(0, 0%, 100%);
     }
 }
 
@@ -41,7 +39,6 @@ $sizeName: 30px;
         // Text Style
         color: white;
         text-decoration: none;
-        @include global.poppins("regular");
     }
 
     // Apply to navbar container
@@ -57,15 +54,18 @@ $sizeName: 30px;
         // Name Title (or Brand Title)
         #name {
             font-size: $sizeName;
+            @include global.poppins($weight: "semibold");
         }
 
         // Links
-        #links {
+        .link {
             // Remove bullet/number points
             list-style: none;
             overflow: hidden;
             font-size: calc($sizeName - 10px);
+            @include global.poppins($weight: "regular");
 
+            // INACTIVE - Change Color
             li {
                 display: inline-block;
                 padding: 10px;
@@ -78,17 +78,20 @@ $sizeName: 30px;
                     color: black;
                     @include btnColor("active");
                 }
+            }
 
-                /*
-                Add spacing to the right of each button
-                ensure the last has no spacing; the navbar already has spacing,
-                and no additional spacing required
-                */
-                // margin-right: 1rem;
+            // ACTIVE - Highlight Color
+            #active {
+                color: black;
+                @include btnColor("active");
 
-                // &:last-child {
-                //     margin-right: 0;
-                // }
+                &:hover {
+                    background-color: hsl(0, 0%, 70%);
+                }
+                &:active {
+                    color: white;
+                    background-color: hsl(0, 0%, 40%);
+                }
             }
         }
     }
