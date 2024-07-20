@@ -19,13 +19,69 @@ body {
 }
 
 .main-content {
-  height: calc(100% - 60px);
   padding: 0 2vw;
 }
 .main-content * {
   font-family: "Poppins", sans-serif;
-  font-size: "normal";
   font-weight: 400;
+  text-align: center;
+}
+
+/*
+Buttons CSS Module
+
+REFERENCE(s)
+- https://cssgradient.io/
+- https://hslpicker.com/
+- https://youtu.be/hT9ABJyOzwM?si=bcTuy_sayVNfyjCk
+- https://stackoverflow.com/questions/30424248/does-ul-have-default-margin-or-padding
+- https://sass-lang.com/documentation/at-rules/extend/
+*/
+/*
+    Button class
+*/
+.btn, .btn-social {
+  border-radius: 5px;
+}
+.btn-social {
+  border: 3.5px solid black;
+  min-width: 100px;
+  padding: 5px 10px;
+  margin: 10px 0px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+.btn-social#linkedin {
+  background-color: hsl(210, 100%, 35%);
+}
+.btn-social#github, .btn-social#tiktok {
+  background-color: black;
+}
+.btn-social#github:hover, .btn-social#tiktok:hover {
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 20%);
+}
+.btn-social#github:active, .btn-social#tiktok:active {
+  color: black;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+}
+.btn-social#instagram {
+  /*
+      The 3 colors used for this gradiant (in hex):
+      - #5c01b5
+      - #c8009c
+      - #ff9000
+  */
+  background: hsl(270, 99%, 36%);
+  background: linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c01b5", endColorstr="#ff9000", GradientType=1);
+}
+.btn.email, .email.btn-social {
+  border: 4px solid black;
+  background-color: hsl(45, 100%, 90%);
+  color: black;
 }
 
 /*
@@ -40,48 +96,46 @@ body {
   color: white;
   text-decoration: none;
 }
-.navbar .container {
+.navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 60px;
 }
-.navbar .container #name {
-  font-size: 30px;
+.navbar-container #name {
+  font-size: 25px;
   font-family: "Poppins", sans-serif;
-  font-size: "normal";
   font-weight: 600;
 }
-.navbar .container .link {
+.navbar-container .link {
   list-style: none;
   overflow: hidden;
-  font-size: 20px;
+  font-size: 15px;
   font-family: "Poppins", sans-serif;
-  font-size: "normal";
   font-weight: 400;
 }
-.navbar .container .link li {
+.navbar-container .link li {
   display: inline-block;
   padding: 10px;
 }
-.navbar .container .link li:hover {
+.navbar-container .link li:hover {
   border-radius: 5px;
   background-color: hsl(0, 0%, 20%);
 }
-.navbar .container .link li:active {
+.navbar-container .link li:active {
   color: black;
   border-radius: 5px;
   background-color: hsl(0, 0%, 100%);
 }
-.navbar .container .link #active {
+.navbar-container .link #active {
   color: black;
   border-radius: 5px;
   background-color: hsl(0, 0%, 100%);
 }
-.navbar .container .link #active:hover {
+.navbar-container .link #active:hover {
   background-color: hsl(0, 0%, 70%);
 }
-.navbar .container .link #active:active {
+.navbar-container .link #active:active {
   color: white;
   background-color: hsl(0, 0%, 40%);
 }/*# sourceMappingURL=navbar.css.map */

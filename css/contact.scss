@@ -4,10 +4,13 @@ Contact Page
 REFERENCE(s)
 - https://cssgradient.io/
 - https://hslpicker.com/
+- https://youtu.be/hT9ABJyOzwM?si=bcTuy_sayVNfyjCk
+- https://stackoverflow.com/questions/30424248/does-ul-have-default-margin-or-padding
 */
 
 // @use imports
 @use "./global" as global;
+@use "./button";
 
 .flex-container {
     // Flexbox properties
@@ -17,48 +20,67 @@ REFERENCE(s)
     &#row {
         flex-direction: row;
     }
+
     &#col {
         flex-direction: column;
     }
 }
 
-.flex-item {
-    border: 5px solid hsl(0, 0%, 30%);
-    min-width: 300px;
-    min-height: 300px;
-}
-
 .link-contact {
+    // Container properties
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+        // Text properties
+        text-decoration: none;
+    }
+
+    // In case it's used on <li> or <ul> tags
     list-style: none;
 }
 
-.link-button {
-    // Border properties
-    border: 3.5px solid black;
-    border-radius: 5px;
-    padding: 5px 10px;
+.container {
+    // Container Properties
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
 
-    // Text properties - Universal
-    font-size: 20px;
-    color: white;
+    // Alignment settings
+    align-items: center;
+    justify-content: center;
 
-    &#linkedin {
-        background-color: hsl(210, 100%, 35%);
+    // div {
+    //     background-color: hsl(0, 0%, 70%);
+    //     &:nth-child(even) {
+    //         background-color: hsl(0, 0%, 60%);
+    //     }
+    // }
+    
+    &.contact {
+        // Column
+        grid-template-columns: repeat(2, 1fr);
+
     }
-    &#github, &#tiktok {
-        background-color: black;
+    &-social {
+        // Flex settings
+        display: flex;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // max-width: 100%;
+
+        // justify-content: space-around;
     }
-    &#instagram {
-        
-        background: hsl(270, 99%, 36%);
-        background: -moz-linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
-        background: -webkit-linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
-        background: linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c01b5",endColorstr="#ff9000",GradientType=1); 
-    }
-    &#email {
-        color: black;
-        // background-color: hsl(0, 0%, 100%);
-        background-color: hsl(45, 100%, 90%);
-    }
+
+}
+
+.idk {
+    background-color: hsl(0, 0%, 70%);
+    border-radius: 10px;
 }

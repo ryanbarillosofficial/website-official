@@ -8,22 +8,10 @@ Reference(s):
 
 // @use imports
 @use "./global" as global;
+@use "./button" as button;
 
 // Variables, Modules & Mixins
-@mixin btnColor($state) {
-    border-radius: 5px;
-    // border-style: solid;
-
-    @if $state =="hover" {
-        background-color: hsl(0, 0%, 20%);
-    }
-
-    @else if $state =="active" {
-        background-color: hsl(0, 0%, 100%);
-    }
-}
-
-$sizeName: 30px;
+$sizeName: 25px;
 
 /*
  Navigation Bar
@@ -42,7 +30,7 @@ $sizeName: 30px;
     }
 
     // Apply to navbar container
-    .container {
+    &-container {
         // Flexbox properties
         display: flex;
         align-items: center;
@@ -71,19 +59,19 @@ $sizeName: 30px;
                 padding: 10px;
 
                 &:hover {
-                    @include btnColor("hover");
+                    @include button.btnColor("hover");
                 }
 
                 &:active {
                     color: black;
-                    @include btnColor("active");
+                    @include button.btnColor("active");
                 }
             }
 
             // ACTIVE - Highlight Color
             #active {
                 color: black;
-                @include btnColor("active");
+                @include button.btnColor("active");
 
                 &:hover {
                     background-color: hsl(0, 0%, 70%);

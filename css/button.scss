@@ -1,0 +1,90 @@
+/*
+Buttons CSS Module
+
+REFERENCE(s)
+- https://cssgradient.io/
+- https://hslpicker.com/
+- https://youtu.be/hT9ABJyOzwM?si=bcTuy_sayVNfyjCk
+- https://stackoverflow.com/questions/30424248/does-ul-have-default-margin-or-padding
+- https://sass-lang.com/documentation/at-rules/extend/
+*/
+
+// To change button color depending on state
+@mixin btnColor($state) {
+    border-radius: 5px;
+    // border-style: solid;
+
+    @if $state =="hover" {
+        background-color: hsl(0, 0%, 20%);
+    }
+
+    @else if $state =="active" {
+        background-color: hsl(0, 0%, 100%);
+    }
+}
+
+/*
+    Button class
+*/
+.btn {
+    // UNIVERSAL Properties
+    border-radius: 5px;
+
+
+    &-social {
+        @extend .btn;
+        // Button properties
+        border: 3.5px solid black;
+        min-width: 100px;
+        // max-width: 100px;
+
+        // Spacing properties
+        padding: 5px 10px;
+        margin: 10px 0px;
+
+        // Text properties
+        font-size: 20px;
+        text-align: center;
+        color: white;
+
+        &#linkedin {
+            background-color: hsl(210, 100%, 35%);
+        }
+
+        &#github,
+        &#tiktok {
+            background-color: black;
+
+
+            &:hover {
+                @include btnColor("hover");
+            }
+
+            &:active {
+                color: black;
+                @include btnColor("active");
+            }
+        }
+
+        &#instagram {
+            /*
+            The 3 colors used for this gradiant (in hex):
+            - #5c01b5
+            - #c8009c
+            - #ff9000
+        */
+            background: hsl(270, 99%, 36%);
+            background: -moz-linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
+            background: -webkit-linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
+            background: linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c01b5", endColorstr="#ff9000", GradientType=1);
+        }
+    }
+
+    &.email {
+        // Button properties
+        border: 4px solid black;
+        background-color: hsl(45, 100%, 90%);
+        color: black;
+    }
+}
