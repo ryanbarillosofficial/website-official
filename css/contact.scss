@@ -1,5 +1,9 @@
 /*
 Contact Page
+
+REFERENCE(s)
+- https://cssgradient.io/
+- https://hslpicker.com/
 */
 
 // @use imports
@@ -26,5 +30,35 @@ Contact Page
 
 .link-contact {
     list-style: none;
-    
+}
+
+.link-button {
+    // Border properties
+    border: 3.5px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+    // Text properties - Universal
+    font-size: 20px;
+    color: white;
+
+    &#linkedin {
+        background-color: hsl(210, 100%, 35%);
+    }
+    &#github, &#tiktok {
+        background-color: black;
+    }
+    &#instagram {
+        
+        background: hsl(270, 99%, 36%);
+        background: -moz-linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
+        background: -webkit-linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
+        background: linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c01b5",endColorstr="#ff9000",GradientType=1); 
+    }
+    &#email {
+        color: black;
+        // background-color: hsl(0, 0%, 100%);
+        background-color: hsl(45, 100%, 90%);
+    }
 }
