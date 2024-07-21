@@ -13,15 +13,16 @@ REFERENCE(s)
 */
 .btn, .btn-social {
   border-radius: 5px;
+  margin: 0px;
 }
 .btn-social {
   border: 3.5px solid black;
   min-width: 100px;
   padding: 5px 10px;
-  margin: 10px 0px;
   font-size: 20px;
   text-align: center;
   color: white;
+  text-decoration: none;
 }
 .btn-social#linkedin {
   background-color: hsl(210, 100%, 35%);
@@ -49,8 +50,9 @@ REFERENCE(s)
   background: linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c01b5", endColorstr="#ff9000", GradientType=1);
 }
-.btn.email, .email.btn-social {
-  border: 4px solid black;
-  background-color: hsl(45, 100%, 90%);
-  color: black;
+.btn#email, #email.btn-social {
+  border: 3.5px solid black;
+  background-color: black;
+  padding: 5px 10px;
+  color: white;
 }/*# sourceMappingURL=button.css.map */

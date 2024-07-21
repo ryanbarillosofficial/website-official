@@ -9,7 +9,7 @@ REFERENCE(s)
 */
 
 // @use imports
-@use "./global" as global;
+// @use "./global" as global;
 @use "./button";
 
 .flex-container {
@@ -43,44 +43,86 @@ REFERENCE(s)
 
 .container {
     // Container Properties
-    display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-template-columns: 2fr 1fr;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    
+
+    // Link properties
+    * {
+        text-decoration: none;
+    }
 
     // Alignment settings
-    align-items: center;
-    justify-content: center;
+    align-items: center; //for y-axis
+    justify-content: center; //For x-axis
 
-    // div {
-    //     background-color: hsl(0, 0%, 70%);
-    //     &:nth-child(even) {
-    //         background-color: hsl(0, 0%, 60%);
-    //     }
-    // }
-    
-    &.contact {
-        // Column
-        grid-template-columns: repeat(2, 1fr);
-
-    }
     &-social {
-        // Flex settings
-        display: flex;
-        flex-grow: 1;
-        flex-wrap: wrap;
-        justify-content: center;
-        // flex-wrap: wrap;
-        // align-items: center;
-        // max-width: 100%;
+        @extend .container;
+        // Flexbox settings
+        // display: flex;
+        flex-flow: row wrap;
+        $gapsize: 10px;
+        column-gap: $gapsize;
+        row-gap: $gapsize;
+        // X-axis properties
+        justify-content: space-evenly;
+        // Y-axis properties
+        align-content: center;
+    }
 
-        // justify-content: space-around;
+    &-email {
+        // Inheritance
+        @extend .container;
+        // Present everything in rows
+        // flex-wrap: row wrap;
+        flex-direction: row;
+
     }
 
 }
 
-.idk {
-    background-color: hsl(0, 0%, 70%);
-    border-radius: 10px;
+/*
+    Partition Styling
+    !!! DESIGNED FOR ITS CORRESPONDING PAGE !!!
+*/
+.part {
+    * {
+        text-decoration: none;
+    }
+
+    &-01 {
+        @extend .part;
+        /*
+    Set max-width to container, then centre it on page
+    - https://stackoverflow.com/a/11088987
+    */
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    &-02 {
+        @extend .part;
+        background-color: hsl(0, 0%, 100%);
+
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        #line-vertical {
+            background-color: black;
+            width: 5px;
+            height: 200px;
+            margin: 2rem 0;
+        }
+
+
+    }
+}
+
+.mc {
+    display: flex;
+    flex-direction: column;
+    column-gap: 50px;
+    &:last-child {
+        flex-grow: 1;
+    }
 }

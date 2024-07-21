@@ -8,28 +8,6 @@ REFERENCE(s)
 - https://stackoverflow.com/questions/30424248/does-ul-have-default-margin-or-padding
 */
 /*
-    Variables, Modules & Mixins
-*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: hsl(0, 0%, 90%);
-}
-
-.main-content {
-  padding: 0 2vw;
-}
-.main-content * {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-align: center;
-}
-
-/*
 Buttons CSS Module
 
 REFERENCE(s)
@@ -44,15 +22,16 @@ REFERENCE(s)
 */
 .btn, .btn-social {
   border-radius: 5px;
+  margin: 0px;
 }
 .btn-social {
   border: 3.5px solid black;
   min-width: 100px;
   padding: 5px 10px;
-  margin: 10px 0px;
   font-size: 20px;
   text-align: center;
   color: white;
+  text-decoration: none;
 }
 .btn-social#linkedin {
   background-color: hsl(210, 100%, 35%);
@@ -80,10 +59,11 @@ REFERENCE(s)
   background: linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c01b5", endColorstr="#ff9000", GradientType=1);
 }
-.btn.email, .email.btn-social {
-  border: 4px solid black;
-  background-color: hsl(45, 100%, 90%);
-  color: black;
+.btn#email, #email.btn-social {
+  border: 3.5px solid black;
+  background-color: black;
+  padding: 5px 10px;
+  color: white;
 }
 
 .flex-container {
@@ -107,25 +87,61 @@ REFERENCE(s)
   text-decoration: none;
 }
 
-.container {
-  display: grid;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  row-gap: 2rem;
+.container, .container-email, .container-social {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.container.contact {
-  grid-template-columns: repeat(2, 1fr);
+.container *, .container-email *, .container-social * {
+  text-decoration: none;
 }
 .container-social {
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-flow: row wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.container-email {
+  flex-direction: row;
 }
 
-.idk {
-  background-color: hsl(0, 0%, 70%);
-  border-radius: 10px;
+/*
+    Partition Styling
+    !!! DESIGNED FOR ITS CORRESPONDING PAGE !!!
+*/
+.part *, .part-02 *, .part-01 * {
+  text-decoration: none;
+}
+.part-01 {
+  /*
+  Set max-width to container, then centre it on page
+  - https://stackoverflow.com/a/11088987
+  */
+  max-width: 700px;
+  margin: 0 auto;
+}
+.part-02 {
+  background-color: hsl(0, 0%, 100%);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.part-02 #line-vertical {
+  background-color: black;
+  width: 5px;
+  height: 200px;
+  margin: 2rem 0;
+}
+
+.mc {
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.mc:last-child {
+  flex-grow: 1;
 }/*# sourceMappingURL=contact.css.map */

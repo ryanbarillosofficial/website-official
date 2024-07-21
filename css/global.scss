@@ -67,10 +67,14 @@ body {
 
 .main-content {
     // height: calc(100% - $navbarHeight);
-    @include spacingLeftRight();
+    // @include spacingLeftRight();
     // Enforce Font on all elements
     * {
         @include poppins();
         text-align: center;
     }
+
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
 }

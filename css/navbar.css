@@ -19,7 +19,10 @@ body {
 }
 
 .main-content {
-  padding: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 .main-content * {
   font-family: "Poppins", sans-serif;
@@ -42,15 +45,16 @@ REFERENCE(s)
 */
 .btn, .btn-social {
   border-radius: 5px;
+  margin: 0px;
 }
 .btn-social {
   border: 3.5px solid black;
   min-width: 100px;
   padding: 5px 10px;
-  margin: 10px 0px;
   font-size: 20px;
   text-align: center;
   color: white;
+  text-decoration: none;
 }
 .btn-social#linkedin {
   background-color: hsl(210, 100%, 35%);
@@ -138,4 +142,11 @@ REFERENCE(s)
 .navbar-container .link #active:active {
   color: white;
   background-color: hsl(0, 0%, 40%);
+}
+
+@media screen and (min-width: 600px) {
+  .container-social {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }/*# sourceMappingURL=navbar.css.map */

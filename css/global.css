@@ -12,7 +12,10 @@ body {
 }
 
 .main-content {
-  padding: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 .main-content * {
   font-family: "Poppins", sans-serif;

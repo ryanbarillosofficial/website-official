@@ -84,3 +84,11 @@ $sizeName: 25px;
         }
     }
 }
+
+@media screen and (min-width: 600px) {
+    .container-social {
+        $spaceLR: 5rem;
+        margin-left: $spaceLR;
+        margin-right: $spaceLR;
+    }    
+}
