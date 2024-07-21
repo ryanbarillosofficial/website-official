@@ -20,6 +20,7 @@ body * {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-align: center;
+  text-decoration: none;
 }
 
 /*
@@ -91,7 +92,6 @@ REFERENCE(s)
 }
 .navbar * {
   color: white;
-  text-decoration: none;
 }
 .navbar-container {
   display: flex;

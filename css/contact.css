@@ -66,14 +66,11 @@ REFERENCE(s)
   color: white;
 }
 
-.container, .container-email, .container-social {
+.container, .container-social {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.container *, .container-email *, .container-social * {
-  text-decoration: none;
 }
 .container-social {
   flex-flow: row wrap;
@@ -82,11 +79,6 @@ REFERENCE(s)
   row-gap: 10px;
   justify-content: space-evenly;
   align-content: center;
-}
-.container-email {
-  flex-grow: 1;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 
 .main-content {
@@ -103,15 +95,16 @@ REFERENCE(s)
   padding: 20px 0;
 }
 .part-1 {
-  /*
-  Set max-width to container, then centre it on page
-  - https://stackoverflow.com/a/11088987
-  */
   max-width: 700px;
   margin: 0 auto;
+  padding-top: 0;
 }
 .part-2 {
   background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   flex-grow: 1;
 }
 .part-2 #line-vertical {

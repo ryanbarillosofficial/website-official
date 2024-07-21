@@ -62,5 +62,6 @@ body {
     * {
         @include poppins();
         text-align: center;
+        text-decoration: none;
     }
 }

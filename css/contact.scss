@@ -20,9 +20,7 @@ REFERENCE(s)
 
 
     // Link properties
-    * {
-        text-decoration: none;
-    }
+
 
     // Alignment settings
     align-items: center; //for y-axis
@@ -36,23 +34,9 @@ REFERENCE(s)
         $gapsize: 10px;
         column-gap: $gapsize;
         row-gap: $gapsize;
-        // X-axis properties
-        justify-content: space-evenly;
-        // Y-axis properties
-        align-content: center;
+        justify-content: space-evenly; //for x-axis
+        align-content: center; // for y-axis
     }
-
-    &-email {
-        // Inheritance
-        @extend .container;
-        flex-grow: 1;
-        // Present everything in rows
-        // flex-wrap: row wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-
-    }
-
 }
 
 .main-content {
@@ -66,16 +50,15 @@ REFERENCE(s)
     !!! DESIGNED FOR ITS CORRESPONDING PAGE !!!
 */
 .part {
+    // border: 5px solid black;
     padding: 20px 0;
 
     &-1 {
         @extend .part;
-        /*
-    Set max-width to container, then centre it on page
-    - https://stackoverflow.com/a/11088987
-    */
+        // https://stackoverflow.com/a/11088987
         max-width: 700px;
         margin: 0 auto;
+        padding-top: 0;
     }
 
     &-2 {
@@ -88,7 +71,10 @@ REFERENCE(s)
             height: 200px;
             margin: 2rem 0;
         }
-
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
         flex-grow: 1;
 
     }
