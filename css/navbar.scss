@@ -12,6 +12,7 @@ Reference(s):
 
 // Variables, Modules & Mixins
 $sizeName: 25px;
+$navbarHeight: 60px;
 
 /*
  Navigation Bar
@@ -19,7 +20,7 @@ $sizeName: 25px;
 .navbar {
     // Navbar styling
     background-color: black;
-    height: global.$navbarHeight;
+    height: $navbarHeight;
     @include global.spacingLeftRight();
 
     // Apply to all elements
@@ -36,7 +37,7 @@ $sizeName: 25px;
         align-items: center;
         justify-content: space-between;
         // margin: 0px 2rem;
-        height: global.$navbarHeight;
+        height: $navbarHeight;
 
 
         // Name Title (or Brand Title)

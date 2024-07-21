@@ -66,27 +66,6 @@ REFERENCE(s)
   color: white;
 }
 
-.flex-container {
-  display: flex;
-  align-items: center;
-}
-.flex-container#row {
-  flex-direction: row;
-}
-.flex-container#col {
-  flex-direction: column;
-}
-
-.link-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-}
-.link-contact a {
-  text-decoration: none;
-}
-
 .container, .container-email, .container-social {
   display: flex;
   flex-direction: column;
@@ -105,17 +84,25 @@ REFERENCE(s)
   align-content: center;
 }
 .container-email {
+  flex-grow: 1;
   flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.main-content {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 }
 
 /*
     Partition Styling
     !!! DESIGNED FOR ITS CORRESPONDING PAGE !!!
 */
-.part *, .part-02 *, .part-01 * {
-  text-decoration: none;
+.part, .part-2, .part-1 {
+  padding: 20px 0;
 }
-.part-01 {
+.part-1 {
   /*
   Set max-width to container, then centre it on page
   - https://stackoverflow.com/a/11088987
@@ -123,25 +110,13 @@ REFERENCE(s)
   max-width: 700px;
   margin: 0 auto;
 }
-.part-02 {
+.part-2 {
   background-color: hsl(0, 0%, 100%);
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-grow: 1;
 }
-.part-02 #line-vertical {
+.part-2 #line-vertical {
   background-color: black;
   width: 5px;
   height: 200px;
   margin: 2rem 0;
-}
-
-.mc {
-  display: flex;
-  flex-direction: column;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-}
-.mc:last-child {
-  flex-grow: 1;
 }/*# sourceMappingURL=contact.css.map */
