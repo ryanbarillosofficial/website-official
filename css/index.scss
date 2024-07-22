@@ -1,5 +1,9 @@
 /*
 Index Page
+
+REFERNCE(s):
+Box Shadow
+
 */
 
 .main-content {
@@ -11,6 +15,7 @@ Index Page
 // Paritions
 .part {
     padding: 20px;
+
     &-1 {
         // div {
         //     border: 5px solid blue;
@@ -28,12 +33,19 @@ Index Page
         align-items: center;
         justify-content: space-between;
 
+        /*
+        Adding shadow to card
+        - https://youtu.be/jEuvbVVkcT0?si=8KwTcqctuwE1WjC2
+        */
+        box-shadow: 0px 0px 20px 1px hsla(0, 0%, 0%, 0.2);
+
         // div {
         //     border: 5px solid red;
         // }
 
         #pic {
             padding: 20px;
+
             &_me {
                 $size: 18rem;
                 width: $size;
@@ -42,6 +54,7 @@ Index Page
                 border-radius: 50%;
             }
         }
+
         #info {
             // justify-content: center;
             text-align: left;

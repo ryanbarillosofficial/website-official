@@ -1,5 +1,9 @@
 /*
 Index Page
+
+REFERNCE(s):
+Box Shadow
+
 */
 .main-content {
   display: flex;
@@ -19,6 +23,11 @@ Index Page
   flex-wrap: row;
   align-items: center;
   justify-content: space-between;
+  /*
+  Adding shadow to card
+  - https://youtu.be/jEuvbVVkcT0?si=8KwTcqctuwE1WjC2
+  */
+  box-shadow: 0px 0px 20px 1px hsla(0, 0%, 0%, 0.2);
 }
 .part-1 #pic {
   padding: 20px;
