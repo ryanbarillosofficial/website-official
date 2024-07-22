@@ -20,7 +20,7 @@ Index Page
         background-color: white;
 
         // Design it into a card in the middle of screen
-        width: 800px;
+        width: 750px;
         margin: 0 auto;
 
         display: flex;
@@ -35,7 +35,7 @@ Index Page
         #pic {
             padding: 20px;
             &_me {
-                $size: 20em;
+                $size: 18rem;
                 width: $size;
                 // height: $size;
                 border: 5px solid hsl(0, 0%, 10%);
@@ -60,6 +60,7 @@ Index Page
 
             // Follow screen size
             width: auto;
+            flex-grow: 0;
         }
     }
 }

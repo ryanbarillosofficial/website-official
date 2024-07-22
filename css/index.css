@@ -13,7 +13,7 @@ Index Page
 .part-1 {
   border-radius: 15px;
   background-color: white;
-  width: 800px;
+  width: 750px;
   margin: 0 auto;
   display: flex;
   flex-wrap: row;
@@ -24,7 +24,7 @@ Index Page
   padding: 20px;
 }
 .part-1 #pic_me {
-  width: 20em;
+  width: 18rem;
   border: 5px solid hsl(0, 0%, 10%);
   border-radius: 50%;
 }
@@ -39,5 +39,6 @@ Index Page
     flex-direction: column;
     row-gap: 0px;
     width: auto;
+    flex-grow: 0;
   }
 }/*# sourceMappingURL=index.css.map */
