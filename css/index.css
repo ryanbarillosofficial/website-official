@@ -1,0 +1,43 @@
+/*
+Index Page
+*/
+.main-content {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.part, .part-1 {
+  padding: 20px;
+}
+.part-1 {
+  border-radius: 15px;
+  background-color: white;
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.part-1 #pic {
+  padding: 20px;
+}
+.part-1 #pic_me {
+  width: 20em;
+  border: 5px solid hsl(0, 0%, 10%);
+  border-radius: 50%;
+}
+.part-1 #info {
+  text-align: left;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .part-1 {
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 0px;
+    width: auto;
+  }
+}/*# sourceMappingURL=index.css.map */

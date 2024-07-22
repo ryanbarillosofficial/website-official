@@ -1,0 +1,65 @@
+/*
+Index Page
+*/
+
+.main-content {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+// Paritions
+.part {
+    padding: 20px;
+    &-1 {
+        // div {
+        //     border: 5px solid blue;
+        // }
+        @extend .part;
+        border-radius: 15px;
+        background-color: white;
+
+        // Design it into a card in the middle of screen
+        width: 800px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-wrap: row;
+        align-items: center;
+        justify-content: space-between;
+
+        // div {
+        //     border: 5px solid red;
+        // }
+
+        #pic {
+            padding: 20px;
+            &_me {
+                $size: 20em;
+                width: $size;
+                // height: $size;
+                border: 5px solid hsl(0, 0%, 10%);
+                border-radius: 50%;
+            }
+        }
+        #info {
+            // justify-content: center;
+            text-align: left;
+            // Fill entire remaining space
+            flex-grow: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .part {
+        &-1 {
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 0px;
+
+            // Follow screen size
+            width: auto;
+        }
+    }
+}
