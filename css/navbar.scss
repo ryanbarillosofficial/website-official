@@ -1,94 +1,75 @@
 /*
 Navigation Bar
 
-Reference(s):
+Reference(s)
 - https://youtu.be/PwWHL3RyQgk?si=V-Lax5dIxIbxD7WI
 - https://youtu.be/dPHNrNgM8jI?si=TtWs_gxAgq-NTW-N
+- https://youtu.be/5zDYchk3C5k?si=uTUCpG7awRjH64x4
+
+Fix(es)
+- https://stackoverflow.com/questions/37785345/how-to-get-flexbox-to-include-padding-in-calculations
 */
 
-// @use imports
+// Dependencies
 @use "./global" as global;
 @use "./button" as button;
 
 // Variables, Modules & Mixins
-$sizeName: 25px;
-$navbarHeight: 60px;
+$size_name: 25px;
+$size_pad: 2vw;
 
 /*
  Navigation Bar
  */
-.navbar {
-    // Navbar styling
-    background-color: black;
-    height: $navbarHeight;
-    @include global.spacingLeftRight();
 
-    // Apply to all elements
+header {
+
+    // Width & height
+    height: global.$height_navbar;
+    width: 100%;
+
+    // Color
+    background-color: black;
+
+    // Position
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+
+    // Flexbox settings
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
     * {
-        // Text Style
+        // Font Color
         color: white;
     }
 
-    // Apply to navbar container
-    &-container {
-        // Flexbox properties
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        // margin: 0px 2rem;
-        height: $navbarHeight;
+    // Name Title (or Brand Title)
+    .name {
+        padding-left: $size_pad;
+        font-size: $size_name;
+        @include global.poppins($weight: "semibold");
+    }
 
-
-        // Name Title (or Brand Title)
-        #name {
-            font-size: $sizeName;
-            @include global.poppins($weight: "semibold");
-        }
-
-        // Links
-        .link {
-            // Remove bullet/number points
-            list-style: none;
-            overflow: hidden;
-            font-size: calc($sizeName - 10px);
-            @include global.poppins($weight: "regular");
-
-            // INACTIVE - Change Color
-            li {
-                display: inline-block;
-                padding: 10px;
-
-                &:hover {
-                    @include button.btnColor("hover");
-                }
-
-                &:active {
-                    color: black;
-                    @include button.btnColor("active");
-                }
-            }
-
-            // ACTIVE - Highlight Color
-            #active {
-                color: black;
-                @include button.btnColor("active");
-
-                &:hover {
-                    background-color: hsl(0, 0%, 70%);
-                }
-                &:active {
-                    color: white;
-                    background-color: hsl(0, 0%, 40%);
-                }
-            }
+    // Navigation Buttons
+    .links {
+        display: inline-block;
+        &:last-child {
+            padding-right: $size_pad;
         }
     }
 }
+
+
 
 @media screen and (min-width: 600px) {
     .container-social {
         $spaceLR: 5rem;
         margin-left: $spaceLR;
         margin-right: $spaceLR;
-    }    
+    }
 }

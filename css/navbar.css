@@ -1,28 +1,21 @@
 /*
 Navigation Bar
 
-Reference(s):
+Reference(s)
 - https://youtu.be/PwWHL3RyQgk?si=V-Lax5dIxIbxD7WI
 - https://youtu.be/dPHNrNgM8jI?si=TtWs_gxAgq-NTW-N
+- https://youtu.be/5zDYchk3C5k?si=uTUCpG7awRjH64x4
+
+Fix(es)
+- https://stackoverflow.com/questions/37785345/how-to-get-flexbox-to-include-padding-in-calculations
 */
 /*
     Variables, Modules & Mixins
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: hsl(0, 0%, 90%);
-}
-html *,
-body * {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
-}
-
+/*
+Local Variables
+*/
 /*
 Buttons CSS Module
 
@@ -36,30 +29,59 @@ REFERENCE(s)
 /*
     Button class
 */
-.btn, .btn-social {
+.btn {
+  /*
+  UNIVERSAL Properties
+  */
+}
+.btn-nav {
+  padding: 10px;
+}
+.btn-nav:hover {
   border-radius: 5px;
-  margin: 0px;
+  background-color: hsl(0, 0%, 20%);
+}
+.btn-nav:active {
+  color: black;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+}
+.btn-nav#active {
+  color: black;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+}
+.btn-nav#active:hover {
+  background-color: hsl(0, 0%, 70%);
+}
+.btn-nav#active:active {
+  color: white;
+  background-color: hsl(0, 0%, 40%);
 }
 .btn-social {
-  border: 3.5px solid black;
-  min-width: 100px;
-  padding: 5px 10px;
+  border-radius: 5px;
+  height: 35px;
+  width: 35px;
+  padding: 10px;
   font-size: 20px;
   text-align: center;
   color: white;
   text-decoration: none;
 }
 .btn-social#linkedin {
-  background-color: hsl(210, 100%, 35%);
+  background-color: white;
 }
-.btn-social#github, .btn-social#tiktok {
+.btn-social#github {
   background-color: black;
 }
-.btn-social#github:hover, .btn-social#tiktok:hover {
+.btn-social#tiktok {
+  background-color: black;
+}
+.btn-social#tiktok:hover {
   border-radius: 5px;
   background-color: hsl(0, 0%, 20%);
 }
-.btn-social#github:active, .btn-social#tiktok:active {
+.btn-social#tiktok:active {
   color: black;
   border-radius: 5px;
   background-color: hsl(0, 0%, 100%);
@@ -71,70 +93,55 @@ REFERENCE(s)
       - #c8009c
       - #ff9000
   */
-  background: hsl(270, 99%, 36%);
-  background: linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c01b5", endColorstr="#ff9000", GradientType=1);
+  background-color: white;
 }
-.btn#email, #email.btn-social {
+.btn#email {
   border: 3.5px solid black;
   background-color: black;
   padding: 5px 10px;
   color: white;
 }
 
+.ico-social {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: inherit;
+  height: inherit;
+}
+.ico-social#tiktok {
+  background-image: url("../media/icon/tiktok.svg");
+}
+
 /*
  Navigation Bar
  */
-.navbar {
+header {
+  height: 8vh;
+  width: 100%;
   background-color: black;
-  height: 60px;
-  padding: 0 2vw;
-}
-.navbar * {
-  color: white;
-}
-.navbar-container {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: space-between;
-  height: 60px;
 }
-.navbar-container #name {
+header * {
+  color: white;
+}
+header .name {
+  padding-left: 2vw;
   font-size: 25px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
-.navbar-container .link {
-  list-style: none;
-  overflow: hidden;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-}
-.navbar-container .link li {
+header .links {
   display: inline-block;
-  padding: 10px;
 }
-.navbar-container .link li:hover {
-  border-radius: 5px;
-  background-color: hsl(0, 0%, 20%);
-}
-.navbar-container .link li:active {
-  color: black;
-  border-radius: 5px;
-  background-color: hsl(0, 0%, 100%);
-}
-.navbar-container .link #active {
-  color: black;
-  border-radius: 5px;
-  background-color: hsl(0, 0%, 100%);
-}
-.navbar-container .link #active:hover {
-  background-color: hsl(0, 0%, 70%);
-}
-.navbar-container .link #active:active {
-  color: white;
-  background-color: hsl(0, 0%, 40%);
+header .links:last-child {
+  padding-right: 2vw;
 }
 
 @media screen and (min-width: 600px) {

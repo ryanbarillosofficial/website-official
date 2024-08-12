@@ -11,48 +11,97 @@ REFERENCE(s)
 /*
     Button class
 */
-.btn, .btn-social {
+.btn {
+  /*
+  UNIVERSAL Properties
+  */
+}
+.btn-nav {
+  padding: 10px;
+}
+.btn-nav:hover {
   border-radius: 5px;
-  margin: 0px;
+  background-color: hsl(0, 0%, 20%);
+}
+.btn-nav:active {
+  color: black;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+}
+.btn-nav#active {
+  color: black;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+}
+.btn-nav#active:hover {
+  background-color: hsl(0, 0%, 70%);
+}
+.btn-nav#active:active {
+  color: white;
+  background-color: hsl(0, 0%, 40%);
 }
 .btn-social {
-  border: 3.5px solid black;
-  min-width: 100px;
-  padding: 5px 10px;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  padding: 10px;
   font-size: 20px;
   text-align: center;
   color: white;
   text-decoration: none;
+  box-shadow: 0px 0px 5px 1px hsla(0, 0%, 0%, 0.15);
 }
 .btn-social#linkedin {
-  background-color: hsl(210, 100%, 35%);
+  background-color: white;
 }
-.btn-social#github, .btn-social#tiktok {
+.btn-social#facebook {
+  background-color: hsl(217, 100%, 52%);
+}
+.btn-social#github {
   background-color: black;
 }
-.btn-social#github:hover, .btn-social#tiktok:hover {
+.btn-social#tiktok {
+  background-color: black;
+}
+.btn-social#tiktok:hover {
   border-radius: 5px;
   background-color: hsl(0, 0%, 20%);
 }
-.btn-social#github:active, .btn-social#tiktok:active {
+.btn-social#tiktok:active {
   color: black;
   border-radius: 5px;
   background-color: hsl(0, 0%, 100%);
 }
 .btn-social#instagram {
-  /*
-      The 3 colors used for this gradiant (in hex):
-      - #5c01b5
-      - #c8009c
-      - #ff9000
-  */
-  background: hsl(270, 99%, 36%);
-  background: linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c01b5", endColorstr="#ff9000", GradientType=1);
+  background: rgb(255, 175, 0);
+  background: linear-gradient(32deg, rgb(255, 175, 0) 0%, rgb(223, 0, 181) 48%, rgb(120, 0, 231) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffaf00", endColorstr="#7800e7", GradientType=1);
 }
-.btn#email, #email.btn-social {
+.btn#email {
   border: 3.5px solid black;
+  border-radius: 5px;
   background-color: black;
   padding: 5px 10px;
   color: white;
+}
+
+.ico-social {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: inherit;
+  height: inherit;
+}
+.ico-social#facebook {
+  /*
+      Because the icon is not SVG,
+      a workaround is made to make image fit its container
+  */
+  background-image: url("../media/icon/facebook.png");
+  background-size: 100%;
+}
+.ico-social#instagram {
+  background-image: url("../media/icon/instagram.svg");
+}
+.ico-social#tiktok {
+  background-image: url("../media/icon/tiktok.svg");
 }/*# sourceMappingURL=button.css.map */

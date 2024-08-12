@@ -1,10 +1,15 @@
 /*
-Index Page
+SASS/CSS Styling
+for Index Page
 
-REFERNCE(s):
-Box Shadow
-
+Last Modified: 10 Aug 2024
 */
+// Dependencies
+@use "./global" as global;
+
+html,body {
+    @include global.setPage();
+}
 
 .main-content {
     display: flex;
@@ -14,7 +19,7 @@ Box Shadow
 
 // Paritions
 .part {
-    padding: 20px;
+    padding: 10px;
 
     &-1 {
         // div {

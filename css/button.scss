@@ -23,22 +23,53 @@ REFERENCE(s)
     }
 }
 
+// Variables
+
 /*
     Button class
 */
 .btn {
-    // UNIVERSAL Properties
-    border-radius: 5px;
+    /*
+    UNIVERSAL Properties
+    */
     // border-radius: 10px;
-    margin: 0px;
+    // margin: 0px;
+
+    &-nav {
+        padding: 10px;
+
+        &:hover {
+            @include btnColor("hover");
+        }
+
+        &:active {
+            color: black;
+            @include btnColor("active");
+        }
+
+        // ACTIVE - Highlight Color
+        &#active {
+            color: black;
+            @include btnColor("active");
+
+            &:hover {
+                background-color: hsl(0, 0%, 70%);
+            }
+
+            &:active {
+                color: white;
+                background-color: hsl(0, 0%, 40%);
+            }
+        }
+    }
 
     &-social {
-        @extend .btn;
         // Button properties
-        border: 3.5px solid black;
-        min-width: 100px;
-        padding: 5px 10px;
-
+        border-radius: 5px;
+        $size_btn-social: 30px;
+        height: $size_btn-social;
+        width: $size_btn-social;
+        padding: 10px;
 
         // Text properties
         font-size: 20px;
@@ -46,14 +77,30 @@ REFERENCE(s)
         color: white;
         text-decoration: none;
 
+        // Box shadow
+        box-shadow: 0px 0px 5px 1px hsla(0, 0%, 0%, 0.15);
+
         &#linkedin {
-            background-color: hsl(210, 100%, 35%);
+            // background-color: hsl(210, 100%, 35%);
+            background-color: white;
+            // height: 700px;
+            // width: 700px;
         }
 
-        &#github,
+        &#facebook {
+            background-color: hsl(217, 100%, 52%);
+            // background-color: white;
+            // background: hsl(217, 100%, 52%) url("../media/icon/facebook.png") center no-repeat;
+            // background-size: 100% auto;
+
+        }
+
+        &#github {
+            background-color: black;
+        }
+
         &#tiktok {
             background-color: black;
-
 
             &:hover {
                 @include btnColor("hover");
@@ -66,26 +113,49 @@ REFERENCE(s)
         }
 
         &#instagram {
-            /*
-            The 3 colors used for this gradiant (in hex):
-            - #5c01b5
-            - #c8009c
-            - #ff9000
-        */
-            background: hsl(270, 99%, 36%);
-            background: -moz-linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
-            background: -webkit-linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
-            background: linear-gradient(201deg, hsl(270, 99%, 36%) 0%, hsl(313, 100%, 39%) 50%, hsl(34, 100%, 50%) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c01b5", endColorstr="#ff9000", GradientType=1);
+            // Taken from https://cssgradient.io
+            background: rgb(255, 175, 0);
+            background: -moz-linear-gradient(32deg, rgba(255, 175, 0, 1) 0%, rgba(223, 0, 181, 1) 48%, rgba(120, 0, 231, 1) 100%);
+            background: -webkit-linear-gradient(32deg, rgba(255, 175, 0, 1) 0%, rgba(223, 0, 181, 1) 48%, rgba(120, 0, 231, 1) 100%);
+            background: linear-gradient(32deg, rgba(255, 175, 0, 1) 0%, rgba(223, 0, 181, 1) 48%, rgba(120, 0, 231, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffaf00", endColorstr="#7800e7", GradientType=1);
         }
     }
 
     &#email {
         // Button properties
         border: 3.5px solid black;
+        border-radius: 5px;
         background-color: black;
         padding: 5px 10px;
         // background-color: black;
         color: white;
+    }
+}
+
+.ico {
+    &-social {
+        // Icon Properties
+        background-repeat: no-repeat;
+        background-position: center;
+        width: inherit;
+        height: inherit;
+
+        &#facebook {
+            /*
+                Because the icon is not SVG,
+                a workaround is made to make image fit its container
+            */
+            background-image: url("../media/icon/facebook.png");
+            background-size: 100%;
+        }
+
+        &#instagram {
+            background-image: url("../media/icon/instagram.svg");
+        }
+
+        &#tiktok {
+            background-image: url("../media/icon/tiktok.svg");
+        }
     }
 }

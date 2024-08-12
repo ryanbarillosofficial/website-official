@@ -9,8 +9,12 @@ REFERENCE(s)
 */
 
 // @use imports
-// @use "./global" as global;
+@use "./global" as global;
 @use "./button";
+
+html, body {
+    @include global.setPage();
+}
 
 
 .container {
