@@ -60,16 +60,20 @@ REFERENCE(s)
 }
 .btn-social {
   border-radius: 5px;
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   padding: 10px;
   font-size: 20px;
   text-align: center;
   color: white;
   text-decoration: none;
+  box-shadow: 0px 0px 5px 1px hsla(0, 0%, 0%, 0.15);
 }
 .btn-social#linkedin {
   background-color: white;
+}
+.btn-social#facebook {
+  background-color: hsl(217, 100%, 52%);
 }
 .btn-social#github {
   background-color: black;
@@ -87,16 +91,13 @@ REFERENCE(s)
   background-color: hsl(0, 0%, 100%);
 }
 .btn-social#instagram {
-  /*
-      The 3 colors used for this gradiant (in hex):
-      - #5c01b5
-      - #c8009c
-      - #ff9000
-  */
-  background-color: white;
+  background: rgb(255, 175, 0);
+  background: linear-gradient(32deg, rgb(255, 175, 0) 0%, rgb(223, 0, 181) 48%, rgb(120, 0, 231) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffaf00", endColorstr="#7800e7", GradientType=1);
 }
 .btn#email {
   border: 3.5px solid black;
+  border-radius: 5px;
   background-color: black;
   padding: 5px 10px;
   color: white;
@@ -107,6 +108,17 @@ REFERENCE(s)
   background-position: center;
   width: inherit;
   height: inherit;
+}
+.ico-social#facebook {
+  /*
+      Because the icon is not SVG,
+      a workaround is made to make image fit its container
+  */
+  background-image: url("../media/icon/facebook.png");
+  background-size: 100%;
+}
+.ico-social#instagram {
+  background-image: url("../media/icon/instagram.svg");
 }
 .ico-social#tiktok {
   background-image: url("../media/icon/tiktok.svg");
