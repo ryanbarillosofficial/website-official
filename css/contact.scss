@@ -60,7 +60,7 @@ html, body {
     &-1 {
         @extend .part;
         // https://stackoverflow.com/a/11088987
-        max-width: 700px;
+        max-width: 600px;
         margin: 0 auto;
         padding-top: 0;
     }
@@ -87,11 +87,11 @@ html, body {
         #line-straight {
             background-color: black;
             width: 5px;
-            height: 150px;
+            height: 120px;
             margin: 1rem 0;
         }
 
-        #msg,
+        // #msg,
         #btn {
             flex-grow: 1;
         }

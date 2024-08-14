@@ -58,8 +58,8 @@ REFERENCE(s)
 }
 .btn-social {
   border-radius: 5px;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   padding: 10px;
   font-size: 20px;
   text-align: center;
@@ -164,7 +164,7 @@ html *, body * {
   padding: 20px 0;
 }
 .part-1 {
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
   padding-top: 0;
 }
@@ -186,10 +186,9 @@ html *, body * {
 .part-2 #line-straight {
   background-color: black;
   width: 5px;
-  height: 150px;
+  height: 120px;
   margin: 1rem 0;
 }
-.part-2 #msg,
 .part-2 #btn {
   flex-grow: 1;
 }
