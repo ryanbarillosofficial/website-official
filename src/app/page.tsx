@@ -19,7 +19,7 @@ export default function Home() {
         <div id={index.info}>
           <p>Welcome! My name is Ryan Barillos.</p>
           <br />
-          <p>I'm a Software Developer, Singer-songwriter,</p>
+          <p>I&apos;m a Software Developer, Singer-songwriter,</p>
           <p>and a Symphony Composer.</p>
           <br />
           <p>Pleasure to meet you! And God bless you.</p>
