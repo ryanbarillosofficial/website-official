@@ -73,7 +73,7 @@ const Navigation = () => {
             <header className={`${navbar.nav} ${navbar.horizontal}`}>
                 {/* Page Brand (in this name, First and Last Names) */}
                 <div className={navbar.nav_brand}>
-                    <Link href="/">Ryan Barillos</Link>
+                    <Link href="/" onClick={() => set_menuShow(false)}>Ryan Barillos</Link>
                 </div>
 
                 {/* Navigation Links */}
