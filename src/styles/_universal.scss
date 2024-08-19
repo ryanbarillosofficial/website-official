@@ -1,0 +1,27 @@
+/*
+    Variables, Modules & Mixins
+*/
+$height_navbar: 8vh;
+
+// To apply side paddings on the page
+@mixin spacingLeftRight() {
+    padding: 0 2vw;
+}
+
+// Apply on all pages
+@mixin setPage() {
+    // Spacing
+    margin: 0;
+    padding: 0;
+    margin-top: $height_navbar;
+    
+    // Background Color 
+    background-color: hsl(0, 0%, 90%);
+
+    // Text settings
+    * {
+        text-align: center;
+        text-decoration: none;
+        font-weight: 400;
+    }
+}

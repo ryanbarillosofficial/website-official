@@ -1,0 +1,207 @@
+/*
+Navigation Bar
+
+Reference(s)
+- https://youtu.be/PwWHL3RyQgk?si=V-Lax5dIxIbxD7WI
+- https://youtu.be/dPHNrNgM8jI?si=TtWs_gxAgq-NTW-N
+- https://youtu.be/5zDYchk3C5k?si=uTUCpG7awRjH64x4
+- https://youtu.be/41ZBkZUVApc?si=rVLj0VenAPs0__M_ grid vs. flexbox
+
+Fix(es)
+- https://stackoverflow.com/questions/37785345/how-to-get-flexbox-to-include-padding-in-calculations
+*/
+
+// Dependencies
+@use "../../styles/_universal" as _universal;
+
+// Variables, Modules & Mixins
+$size_name: 25px;
+$size_pad: 2vw;
+
+// To change button color depending on state
+@mixin btnColor($state) {
+
+    // border-style: solid;
+    @if $state =="hover" {
+        background-color: hsl(0, 0%, 20%);
+    }
+
+    @else if $state =="active" {
+        background-color: hsl(0, 0%, 100%);
+        // height: 75%;
+    }
+}
+
+/*
+    Navigation Bar
+*/
+.nav {
+    // Global Settings
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+
+    /*
+    Children properties
+    - Center them on both x-axis and y-axis
+    - Element's height = Parent Height (button height = navbar height)
+    - Text color is WHITE
+    */
+    * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        color: white;
+    }
+
+    /*
+    Horizontal view - Settings
+    */
+    &.horizontal {
+        // Position
+        z-index: 999;
+
+        // Size & Display settings
+        height: _universal.$height_navbar;
+        align-items: flex-end;
+    }
+
+    /*
+    Vertical view - Settings
+    */
+    &.vertical {
+        // Size & display settings
+        height: 100%;
+        flex-direction: column;
+        overflow: scroll;
+        // visibility: hidden;
+        background-color: hsl(0, 0%, 10%);
+    }
+}
+
+/*
+Name Title (or Brand Title)
+*/
+.nav_brand {
+    // Add padding on navbar
+    padding-left: $size_pad;
+
+    // Style settings
+    margin-right: auto;
+
+    * {
+        // font-weight: 700;
+        font-size: $size_name;
+    }
+}
+
+/*
+Navigation Links
+*/
+.nav_list {
+    &#horizontal {
+        // Add padding on navbar
+        padding-right: $size_pad;
+
+        * {
+            padding: 0 10px;
+            height: 70%;
+            margin-left: 5px;
+        }
+    }
+
+    &#vertical {
+        display: flex;
+        flex-flow: column;
+        // overflow-y: scroll;
+        justify-content: flex-start;
+        font-size: 1.25rem;
+
+        margin-top: _universal.$height_navbar;
+
+        * {
+            width: 100%;
+            height: 10%;
+        }
+    }
+}
+
+
+/*
+Buttons
+*/
+.nav_btn {
+    border-radius: 5px;
+
+    &:hover {
+        @include btnColor("hover");
+    }
+
+    &:active {
+        color: black;
+        @include btnColor("active");
+    }
+
+    // ACTIVE - Highlight Color
+    &#active {
+        color: black;
+        @include btnColor("active");
+
+        &:hover {
+            background-color: hsl(0, 0%, 70%);
+        }
+
+        &:active {
+            color: white;
+            background-color: hsl(0, 0%, 40%);
+        }
+    }
+}
+
+.nav_menu {
+    // background settings
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    // Size & position
+    margin-right: 2vw;
+    width: 30px;
+
+    &#open {
+        background-image: url("../../../public/icons/navigation/menu.svg");
+    }
+
+    &#close {
+        background-image: url("../../../public/icons/navigation/close.svg");
+    }
+}
+
+
+
+@media screen and (max-width: 850px) {
+
+    .nav_list {
+        &#horizontal {
+            display: none;
+        }
+    }
+
+    .nav_menu {
+        display: block;
+    }
+
+    .nav_btn {
+        border-radius: 0;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .nav_menu {
+        display: none;
+    }
+}

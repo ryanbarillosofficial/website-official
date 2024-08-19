@@ -9,13 +9,7 @@ REFERENCE(s)
 */
 
 // @use imports
-@use "./global" as global;
 @use "./button";
-
-html, body {
-    @include global.setPage();
-}
-
 
 .container {
     // Container Properties
@@ -30,7 +24,7 @@ html, body {
     align-items: center; //for y-axis
     justify-content: center; //For x-axis
 
-    &-social {
+    &_social {
         @extend .container;
         // Flexbox settings
         // display: flex;
@@ -57,7 +51,7 @@ html, body {
     // border: 5px solid black;
     padding: 20px 0;
 
-    &-1 {
+    &_01 {
         @extend .part;
         // https://stackoverflow.com/a/11088987
         max-width: 600px;
@@ -65,7 +59,7 @@ html, body {
         padding-top: 0;
     }
 
-    &-2 {
+    &_02 {
         @extend .part;
         background-color: white;
         // Design it into a card in the middle of screen
@@ -84,7 +78,7 @@ html, body {
         justify-content: space-evenly;
         align-items: center;
 
-        #line-straight {
+        #line_straight {
             background-color: black;
             width: 5px;
             height: 120px;
@@ -103,7 +97,7 @@ html, body {
         flex-direction: column;
         row-gap: 0px;
 
-        &-2 {
+        &_02 {
             flex-flow: column wrap;
             justify-content: center;
 
@@ -113,7 +107,7 @@ html, body {
 
             padding: 2rem;
 
-            #line-straight {
+            #line_straight {
                 visibility: hidden;
                 width: 0;
                 height: 0;

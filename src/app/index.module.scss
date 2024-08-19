@@ -2,35 +2,20 @@
 SASS/CSS Styling
 for Index Page
 
-Last Modified: 10 Aug 2024
+Last Modified: 18 Aug 2024
 */
-// Dependencies
-@use "./global" as global;
-
-html,body {
-    @include global.setPage();
-}
-
-.main-content {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-}
 
 // Paritions
-.part {
+.card {
     padding: 10px;
 
-    &-1 {
-        // div {
-        //     border: 5px solid blue;
-        // }
-        @extend .part;
+    &_01 {
+        @extend .card;
         border-radius: 15px;
         background-color: white;
 
         // Design it into a card in the middle of screen
-        width: 750px;
+        max-width: 750px;
         margin: auto;
 
         display: flex;
@@ -52,8 +37,9 @@ html,body {
             padding: 20px;
 
             &_me {
-                $size: 18rem;
-                width: $size;
+                $size: 275px;
+                max-width: $size;
+                max-height: $size;
                 // height: $size;
                 border: 5px solid hsl(0, 0%, 10%);
                 border-radius: 50%;
@@ -70,15 +56,12 @@ html,body {
 }
 
 @media screen and (max-width: 700px) {
-    .part {
-        &-1 {
+    .card {
+        &_01 {
             justify-content: center;
             flex-direction: column;
             row-gap: 0px;
-
-            // Follow screen size
-            width: auto;
-            flex-grow: 0;
+            // flex-grow: 0;
         }
     }
 }

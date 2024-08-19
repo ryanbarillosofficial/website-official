@@ -1,0 +1,10 @@
+@use "./universal" as universal;
+
+/*
+Global Styles
+- to style HTML and Body tags
+*/
+
+html, body {
+    @include universal.setPage();
+}
