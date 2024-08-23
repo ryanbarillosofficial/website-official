@@ -43,6 +43,7 @@ $size_pad: 2vw;
     display: flex;
     justify-content: center;
     background-color: black;
+    min-height: _universal.$height_navbar;
 
     /*
     Children properties
@@ -66,8 +67,7 @@ $size_pad: 2vw;
         z-index: 999;
 
         // Size & Display settings
-        height: _universal.$height_navbar;
-        align-items: flex-end;
+        min-height: _universal.$height_navbar;
     }
 
     /*
