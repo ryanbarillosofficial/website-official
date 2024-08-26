@@ -1,0 +1,32 @@
+/*
+About Me styling
+*/
+
+@use "/src/styles/universal" as universal;
+
+// Text Block
+.main {
+    padding: 0 20px;
+}
+
+.block_text {
+    // Graphic settings
+    background-color: white;
+    box-shadow: universal.$set_shadow;
+    border-radius: universal.$set_radius;
+
+    // Display settings    
+    padding: 10px 20px;
+    max-width: 750px;
+    margin: 0 auto;
+
+    // Text settings
+    h1, h2, h3 {
+        text-align: left;
+        font-weight: 500;
+    }
+    p {
+        text-align: justify;
+        text-justify: auto;
+    }
+}

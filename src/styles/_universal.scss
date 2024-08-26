@@ -3,6 +3,8 @@
 */
 $height_navbar: 8vh;
 $width_spacing: 2vw;
+$set_shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.2);
+$set_radius: 10px;
 
 // To apply side paddings on the page
 @mixin spacingLeftRight() {
