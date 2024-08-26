@@ -12,7 +12,7 @@ Fix(es)
 */
 
 // Dependencies
-@use "../../styles/_universal" as _universal;
+@use "/src/styles/universal" as universal;
 
 // Variables, Modules & Mixins
 $size_name: 25px;
@@ -43,7 +43,7 @@ $size_pad: 2vw;
     display: flex;
     justify-content: center;
     background-color: black;
-    min-height: _universal.$height_navbar;
+    min-height: universal.$height_navbar;
 
     /*
     Children properties
@@ -67,7 +67,7 @@ $size_pad: 2vw;
         z-index: 999;
 
         // Size & Display settings
-        min-height: _universal.$height_navbar;
+        min-height: universal.$height_navbar;
     }
 
     /*
@@ -105,7 +105,7 @@ Navigation Links
 .nav_list {
     &#horizontal {
         // Add padding on navbar
-        padding-right: $size_pad;
+        padding-right: universal.$width_spacing;
 
         * {
             padding: 0 10px;
@@ -121,7 +121,7 @@ Navigation Links
         justify-content: flex-start;
         font-size: 1.25rem;
 
-        margin-top: _universal.$height_navbar;
+        margin-top: universal.$height_navbar;
 
         * {
             width: 100%;
@@ -169,7 +169,8 @@ Buttons
     background-position: center;
 
     // Size & position
-    margin-right: 2vw;
+    // margin-right: 2vw;
+    margin-right: calc(universal.$width_spacing * 2);
     width: 30px;
 
     &#open {
@@ -184,6 +185,9 @@ Buttons
 
 
 @media screen and (max-width: 850px) {
+    .nav_brand {
+        padding-left: calc(universal.$width_spacing * 2);
+    }
     .nav_list {
         &#horizontal {
             display: none;

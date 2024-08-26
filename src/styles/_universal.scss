@@ -2,10 +2,11 @@
     Variables, Modules & Mixins
 */
 $height_navbar: 8vh;
+$width_spacing: 2vw;
 
 // To apply side paddings on the page
 @mixin spacingLeftRight() {
-    padding: 0 2vw;
+    padding: 0 $width_spacing;
 }
 
 // Apply on all pages

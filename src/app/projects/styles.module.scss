@@ -9,6 +9,9 @@ References
 - https://www.sitepoint.com/css-grid-center-element/
 - https://youtu.be/RhUuMl3R1PE?si=X_35d46Brt3iEv79
 */
+
+@use "/src/styles/universal" as universal;
+
 .main {
     // Local variables
     $gap_size: 15px;
