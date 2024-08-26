@@ -24,7 +24,7 @@ const lsSocial: Link_Social[] = [
   new Link_Social("Facebook", "https://www.facebook.com/profile.php?id=61562294762013&mibextid=ZbWKwL"),
   new Link_Social("Instagram", "https://instagram.com/ryanbarillosofficial/"),
   // new Link_Social("LinkedIn", "https://linkedin.com/in/ryanbarillosofficial/"),
-  new Link_Social("TikTok", "https://tiktok.com/@ryanbarillosofficial")
+  new Link_Social("TikTok", "https://tiktok.com/@ryanbarillosofficial"),
 ];
 
 

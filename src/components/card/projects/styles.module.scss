@@ -1,0 +1,78 @@
+/*
+Project Card
+*/
+
+// Dependencies
+@use "/src/styles/universal" as _universal;
+
+.card_project {
+    // Local variables
+    $settings_shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.2);
+    
+    // Graphic settings
+    background-color: white;
+    border-radius: 10px;
+    max-width: 450px;
+
+    // Display settings
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-shadow: $settings_shadow;
+
+    // Horizontal line settings
+    .line {
+        border: 1px solid hsla(0, 0%, 0%, 1);
+        width: 40%;
+    }
+
+    /*
+    Title Settings
+    
+    Note:
+    Given that all built-in HTML tags have margins,
+    header tags have very large margins & paddins.
+    Thus, I removed it here to keep card size small.
+    */
+    .title {
+        // padding: 0;
+        margin: 0;
+    }
+
+    // Description settings
+    .description {
+        text-align: justify;
+        text-justify: auto;
+        padding: 0 10px;
+
+        /*
+        Text settings
+        - Justify it
+        */
+    }
+
+    // Button settings
+    .button {
+        // Display settings
+        display: flex;
+        border-radius: 10px;
+        padding: 0 5%;
+        height: 50px;
+        box-shadow: $settings_shadow;
+
+        // flex settings
+        flex-direction: row;
+        column-gap: 10px;
+    }
+
+    /*
+    Icon settings
+    - To be used inside the button
+    */
+    .icon {
+        border-radius: 50%;
+        box-shadow: $settings_shadow;
+        // border: 2px solid red;
+    }
+}

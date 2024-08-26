@@ -1,0 +1,8 @@
+# GitHub
+- https://github.com/logos
+
+# Google Fonts (for "testing.svg")
+- https://fonts.google.com/icons
+
+# MuseScore
+- https://github.com/musescore/MuseScore/blob/master/src/appshell/qml/resources/mu_logo.svg

@@ -173,18 +173,17 @@ Buttons
     width: 30px;
 
     &#open {
-        background-image: url("../../../public/icons/navigation/menu.svg");
+        background-image: url("/icons/navigation/menu.svg");
     }
 
     &#close {
-        background-image: url("../../../public/icons/navigation/close.svg");
+        background-image: url("/icons/navigation/close.svg");
     }
 }
 
 
 
 @media screen and (max-width: 850px) {
-
     .nav_list {
         &#horizontal {
             display: none;
