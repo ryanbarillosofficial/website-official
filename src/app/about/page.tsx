@@ -28,7 +28,7 @@ const About = () => {
    */
   const length: number = about.paragraph.length
   return (
-    <div className={styles.main}>
+    <>
       <h1>About Me</h1>
       <div className={styles.block_text}>
         {/* The headlin */}
@@ -36,7 +36,7 @@ const About = () => {
         {/* Each paragraph on the card */}
         {about.paragraph.map((text, index) => {return(<p key={index}>{text}</p>)})} 
       </div>
-    </div>
+    </>
   )
 }
 

@@ -8,3 +8,7 @@ Global Styles
 html, body {
     @include universal.setPage();
 }
+
+.main {
+    padding: 0 universal.$width_padding;
+}

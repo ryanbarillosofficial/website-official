@@ -15,7 +15,7 @@ Reference(s)
 - https://stackoverflow.com/questions/54436021/nextjs-public-folder
 */
 import React from 'react'
-import styles from "./styles.module.scss"
+import styles from "./card_project.module.scss"
 import Link from 'next/link'
 import Image from 'next/image'
 

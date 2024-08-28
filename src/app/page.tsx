@@ -6,7 +6,7 @@ export default function Home() {
   const pic_me="/avatars/home/ryan.jpg"
 
   return (
-    <main className={styles.main}>
+    <>
       {/* Main Content */}
       <div>
       <h1 className={styles.page_title}>Home</h1>
@@ -26,6 +26,6 @@ export default function Home() {
           <p></p>
         </div>
       </div>
-    </main >
+    </>
   );
 }

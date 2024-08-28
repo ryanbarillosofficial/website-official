@@ -1,5 +1,5 @@
 import React from 'react'
-import CardProject from '@/components/card/projects/project'
+import CardProject from '@/components/card/card_project'
 import styles from "./styles.module.scss"
 import { Metadata } from 'next'
 

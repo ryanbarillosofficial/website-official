@@ -36,7 +36,7 @@ const lsSocial: Link_Social[] = [
 
 const Contact = () => {
   return (
-    <main className={styles.main}>
+    <>
       <div className={styles.part_01}>
         <div>
           <h1>Follow Me!</h1>
@@ -68,7 +68,7 @@ const Contact = () => {
           </a>
         </div>
       </div>
-    </main>
+    </>
   )
 }
 

@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 const Music = () => {
   return (
-    <main className={styles.main}>
+    <>
       <h1>My Music</h1>
       <h2>Coming Soon</h2>
-    </main>
+    </>
   )
 }
 
