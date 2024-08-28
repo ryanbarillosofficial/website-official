@@ -15,8 +15,12 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Ryan Barillos",
-  description: "The official website of Ryan Barillos",
+  title: {
+    absolute: "",
+    default: "Ryan Barillos",
+    template: "%s | Ryan Barillos",
+  },
+  description: "The Official Website of Ryan Barillos",
 };
 
 export default function RootLayout({

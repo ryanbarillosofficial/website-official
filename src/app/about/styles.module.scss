@@ -6,9 +6,10 @@ About Me styling
 
 // Text Block
 .main {
-    padding: 0 20px;
+    padding: 0 universal.$width_padding;
 }
 
+// Text Card
 .block_text {
     // Graphic settings
     background-color: white;

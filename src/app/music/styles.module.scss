@@ -1,0 +1,10 @@
+/*
+About Me styling
+*/
+
+@use "/src/styles/universal" as universal;
+
+// Text Block
+.main {
+    padding: 0 universal.$width_padding;
+}

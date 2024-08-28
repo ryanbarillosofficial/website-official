@@ -1,9 +1,13 @@
-'use client'
+// 'use client'
 
 import React from 'react'
-import styles from "./contact.module.scss"
+import styles from "./styles.module.scss"
 import Link from 'next/link';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: "Contact"
+}
 
 // Link_Social Class
 class Link_Social {
@@ -32,7 +36,7 @@ const lsSocial: Link_Social[] = [
 
 const Contact = () => {
   return (
-    <main>
+    <main className={styles.main}>
       <div className={styles.part_01}>
         <div>
           <h1>Follow Me!</h1>

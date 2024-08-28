@@ -10,6 +10,12 @@ REFERENCE(s)
 
 // @use imports
 @use "./button";
+@use "/src/styles/universal" as universal;
+
+.main {
+    padding: 0 universal.$width_padding;
+}
+
 
 .container {
     // Container Properties

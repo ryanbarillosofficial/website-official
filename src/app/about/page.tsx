@@ -8,11 +8,15 @@
  */
 import React from 'react'
 import styles from "./styles.module.scss"
-import {promises as fs} from "fs"
+// import {promises as fs} from "fs"
 import about from "./about.json"
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: "About Me",
+}
 
-const About = async() => {
+const About = () => {
   /**
    * Get text from text file
    * 

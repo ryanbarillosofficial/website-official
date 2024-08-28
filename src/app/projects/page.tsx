@@ -1,6 +1,11 @@
 import React from 'react'
 import CardProject from '@/components/card/projects/project'
 import styles from "./styles.module.scss"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Projects",
+}
 
 const Projects = () => {
   /*
