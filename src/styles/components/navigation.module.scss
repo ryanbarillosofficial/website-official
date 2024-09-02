@@ -184,7 +184,7 @@ Buttons
 
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: universal.$width_screen_limit) {
     .nav_brand {
         padding-left: calc(universal.$width_spacing * 2);
     }
@@ -203,7 +203,7 @@ Buttons
     }
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: universal.$width_screen_limit) {
     .nav_menu {
         display: none;
     }

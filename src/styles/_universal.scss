@@ -2,10 +2,12 @@
     Variables, Modules & Mixins
 */
 $height_navbar: 8vh;
-$width_spacing: 2vw;
 $width_padding: 20px;
+$width_spacing: 2vw;
+$width_screen_limit: 800px;
 $set_shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.2);
 $set_radius: 10px;
+$set_box_shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.2);
 
 // To apply side paddings on the page
 @mixin spacingLeftRight() {
@@ -28,4 +30,32 @@ $set_radius: 10px;
         text-decoration: none;
         font-weight: 400;
     }
+}
+
+// Settings for all cards
+@mixin set_card {
+    // Depth
+    box-shadow: $set_box_shadow;
+    
+    // Design
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+
+    /*
+    Originally just 10px only, but added 20px for the card_about
+    */
+    padding: 10px 20px; 
+
+    /*
+    Set all text to justify
+    */
+    p {
+        text-align: justify;
+        text-justify: auto;
+    }
+}
+
+.headline {
+    font-weight: 500;
+    font-size: 24px;
 }

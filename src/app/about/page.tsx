@@ -6,9 +6,9 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions
  * https://stackoverflow.com/questions/43174080/how-to-map-through-an-array-in-react-without-ids
  */
+// import {promises as fs} from "fs"
 import React from 'react'
 import styles from "./styles.module.scss"
-// import {promises as fs} from "fs"
 import about from "./about.json"
 import { Metadata } from 'next'
 
@@ -31,7 +31,7 @@ const About = () => {
     <>
       <h1>About Me</h1>
       <div className={styles.block_text}>
-        {/* The headlin */}
+        {/* The headline */}
         <h2>{about.header}</h2>
         {/* Each paragraph on the card */}
         {about.paragraph.map((text, index) => {return(<p key={index}>{text}</p>)})} 

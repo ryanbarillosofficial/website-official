@@ -1,6 +1,6 @@
 import React from 'react'
-import CardProject from '@/components/card/card_project'
-import styles from "./styles.module.scss"
+import Card_Project from '@/components/card/card_project'
+import styles from "@/styles/app/projects.module.scss"
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -23,14 +23,14 @@ const Projects = () => {
     <main>
       <h1>My Projects</h1>
       <div className={styles.main}>
-        <CardProject
+        <Card_Project
         title={"Software"}
         description={"I develop software programs and solutions to solve problems. From websites to applications, there will always be something to develop."}
         platform_name='GitHub'
         platform_link='https://github.com/ryanbarillosofficial'
         />
         
-        <CardProject
+        <Card_Project
         title={"Music"}
         description={"I enjoy composing music, especially when the entire orchestra is involved! And for songs that I like, I transcribe those works for everyone to play and listen."}
         platform_name='MuseScore'

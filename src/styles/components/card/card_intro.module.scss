@@ -1,0 +1,85 @@
+/*
+Intro Card
+
+Reference(s):
+- https://www.youtube.com/watch?v=KFJbIyqgGt0
+- https://github.com/WebDesignMastery/Responsive_Portfolio_10-05-23
+*/
+
+// Dependencies
+@use "/src/styles/universal" as universal;
+
+.card_intro {
+    // Presets
+    @include universal.set_card;
+
+    // Design & Graphic settings
+    max-width: 750px;
+    margin: 0 auto;
+
+    // Display settings
+    display: grid;
+    column-gap: 16px;
+
+    /*
+    Children settings
+
+    NOTE(s)
+    - Currently, I am just centering each immediate children
+    */
+    .block_img, .block_txt {
+        display: grid;
+        place-self: center;
+    }
+}
+
+.block_img {
+    // Size settings
+    max-width: inherit;
+    max-height: inherit;
+
+    // Children settings
+    * {
+        display: grid;
+        place-self: center;
+    }
+    // Image tag settings
+    img, Image {
+        width: min(270px, 90%);
+        height: auto;
+        border: 4px solid hsl(0, 0%, 10%);
+        border-radius: 100%;
+    }
+}
+
+// Text Block
+.block_txt {
+    // Size
+    height: inherit;
+    width: inherit;
+}
+
+@media screen and (max-width: universal.$width_screen_limit) {
+    /*
+    When the screen is vertical,
+    Center the headline, "Hi! My name is X"
+    */
+    .headline {
+        display: grid;
+        place-self: center;
+    }
+}
+
+@media screen and (min-width: universal.$width_screen_limit) {
+    .card_intro {
+        grid-template-columns: 0.8fr 1fr;
+
+        /*
+        Taking some padding away for these reasons
+        - The picture has too many spaces (applied from universal.set_card()
+
+        Thus, only when screen size is wide, remove it
+        */
+        padding-left: 0;
+    }
+}

@@ -15,7 +15,7 @@ Reference(s)
 - https://stackoverflow.com/questions/54436021/nextjs-public-folder
 */
 import React from 'react'
-import styles from "./card_project.module.scss"
+import styles from "@/styles/components/card/card_project.module.scss"
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -34,7 +34,7 @@ type Arguments = {
 }
 
 /*
-Default values of <CardProject> tag
+Default values of <Card_Project> tag
  */
 const test = {
   title: "Test Title",
@@ -46,7 +46,7 @@ const test = {
   btn_color_text: "white",
 }
 
-const CardProject = ({
+const Card_Project = ({
   title = test.title,
   description = test.description,
   platform_name = test.platform_name,
@@ -67,20 +67,17 @@ const CardProject = ({
       <div className={styles.line}></div>
       <p className={styles.description}>{description}</p>
 
-      {/* This is the button to visit the projects */}
+      {/**
+       * This is the button to visit the projects
+      */}
       <Link target="_blank" href={platform_link} className={styles.button} style={{ backgroundColor: btn_color }}>
-        {/* <p style={{ color: btn_color_text }} className={styles.icon}>X</p> */}
-        <Image
-        src={`/icons/projects/${platform_name.toLowerCase()}.svg` || `/icons/projects/${platform_name.toLowerCase()}.png`}
-        width={size_img}
-        height={size_img}
-        alt={`${platform_name} logo`}
-        className={styles.icon}
-        />
+      {/* This is the icon of the platform */}
+        <Image width={size_img} height={size_img} className={styles.icon} alt={`${platform_name} logo`} src={`/icons/projects/${platform_name.toLowerCase()}.svg` || `/icons/projects/${platform_name.toLowerCase()}.png`}/>
+        {/* This is the text to call to action */}
         <p style={{ color: btn_color_text }}>Check on {platform_name}</p>
       </Link>
     </div>
   )
 }
 
-export default CardProject
+export default Card_Project

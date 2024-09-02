@@ -14,7 +14,7 @@ To open/close navigation menu on screen size change
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import navbar from "./navbar.module.scss"
+import styles from "@/styles/components/navigation.module.scss"
 
 
 // NavLink Class
@@ -57,7 +57,7 @@ const Navigation = () => {
     */
     useEffect(() => {
         window.addEventListener('resize', () => {
-            const sizeSmall = 850;
+            const sizeSmall = 800;
             if (window.innerWidth >= sizeSmall) {
                 set_menuShow(false);
             }
@@ -70,14 +70,14 @@ const Navigation = () => {
     return (
         <>
             {/* Navigation - View Horizontal */}
-            <header className={`${navbar.nav} ${navbar.horizontal}`}>
+            <header className={`${styles.nav} ${styles.horizontal}`}>
                 {/* Page Brand (in this name, First and Last Names) */}
-                <div className={navbar.nav_brand}>
+                <div className={styles.nav_brand}>
                     <Link href="/" onClick={() => set_menuShow(false)}>Ryan Barillos</Link>
                 </div>
 
                 {/* Navigation Links */}
-                <nav className={navbar.nav_list} id={navbar.horizontal}>
+                <nav className={styles.nav_list} id={styles.horizontal}>
                     {lsNav.map((link) => {
                         // Check if page is active
                         const isActive = pathname.startsWith(link.route)
@@ -87,8 +87,8 @@ const Navigation = () => {
                             <Link
                                 key={link.title}
                                 href={link.route}
-                                className={navbar.nav_btn}
-                                id={isActive ? navbar.active : ""}
+                                className={styles.nav_btn}
+                                id={isActive ? styles.active : ""}
                             >
                                 {link.title}
                             </Link>
@@ -97,17 +97,13 @@ const Navigation = () => {
                 </nav>
 
                 {/* Navigation Button - Only visible on small screens */}
-                <div
-                    className={navbar.nav_menu}
-                    onClick={() => set_menuShow(!menuShow)}
-                    id={menuShow ? navbar.close : navbar.open}
-                ></div>
+                <div className={styles.nav_menu} onClick={() => set_menuShow(!menuShow)} id={menuShow ? styles.close : styles.open} />
             </header >
             {/* Navigation - View Vertical */}
             {menuShow && (
-                <header className={`${navbar.nav} ${navbar.vertical}`}>
+                <header className={`${styles.nav} ${styles.vertical}`}>
                     {/* Navigation Links */}
-                    <nav className={navbar.nav_list} id={navbar.vertical}>
+                    <nav className={styles.nav_list} id={styles.vertical}>
                         {lsNav.map((link) => {
                             // Check if page is active
                             const isActive = pathname.startsWith(link.route)
@@ -117,8 +113,8 @@ const Navigation = () => {
                                 <Link
                                     key={link.title}
                                     href={link.route}
-                                    className={navbar.nav_btn}
-                                    id={isActive ? navbar.active : ""}
+                                    className={styles.nav_btn}
+                                    id={isActive ? styles.active : ""}
                                     onClick={() => set_menuShow(!menuShow)}
                                 >
                                     {link.title}
