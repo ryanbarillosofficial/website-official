@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 // import "./globals.css";
 import "../styles/globals.scss"
-import Navigation from "@/components/navbar/navigation";
+import Navigation from "@/components/navigation";
 
 /*
 Use Poppins font from Google
