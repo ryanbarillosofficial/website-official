@@ -45,14 +45,6 @@ $set_box_shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.2);
     Originally just 10px only, but added 20px for the card_about
     */
     padding: 10px 20px; 
-
-    /*
-    Set all text to justify
-    */
-    p {
-        text-align: justify;
-        text-justify: auto;
-    }
 }
 
 .headline {
