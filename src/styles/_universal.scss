@@ -5,7 +5,6 @@ $height_navbar: 8vh;
 $width_padding: 20px;
 $width_spacing: 2vw;
 $width_screen_limit: 800px;
-$set_shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.2);
 $set_radius: 10px;
 $set_box_shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.2);
 
@@ -20,6 +19,8 @@ $set_box_shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.2);
     margin: 0;
     padding: 0;
     margin-top: $height_navbar;
+    margin-bottom: $height_navbar;
+
     
     // Background Color 
     background-color: hsl(0, 0%, 90%);
@@ -44,7 +45,8 @@ $set_box_shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.2);
     /*
     Originally just 10px only, but added 20px for the card_about
     */
-    padding: 10px 20px; 
+    // padding: 10px 20px; 
+    padding: 20px;
 }
 
 .headline {

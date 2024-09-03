@@ -1,0 +1,134 @@
+/*
+Music Card
+
+Reference(s):
+- https://www.youtube.com/watch?v=KFJbIyqgGt0
+- https://github.com/WebDesignMastery/Responsive_Portfolio_10-05-23
+- https://stackoverflow.com/questions/50217730/dynamically-changing-the-number-of-rows-in-a-css-grid
+*/
+
+// Dependencies
+@use "/src/styles/universal" as universal;
+
+// Variables
+$size: universal.$width_screen_limit;
+$size_gap_row: 16px;
+
+.card_music {
+    // Presets
+    @include universal.set_card;
+
+    // Size settings
+    max-width: $size;
+    max-height: $size;
+    margin: 0 auto;
+
+    // Display settings
+    display: grid;
+    grid-template-rows: .1fr 1fr;
+    row-gap: $size_gap_row;
+
+    // Children settings
+    .blk_img,
+    .blk_info,
+    .grid_info {
+        display: grid;
+    }
+
+}
+
+.grid_info {
+    /*
+    Designated for displaying the following
+    - Cover Photo
+    - Album title
+    - Release year
+    - Description
+    */
+}
+
+.grid_list {
+    /*
+    Designated to display the list of songs in a row
+    */
+
+    // Display settings
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    width: 100%;
+
+    // Graphic settings
+    border-radius: 12px;
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+}
+
+
+.blk_img {
+
+    // Children settings
+    * {
+        display: grid;
+        place-self: center;
+    }
+
+    // Image tag settings
+    img,
+    Image {
+        border-radius: 12px;
+        box-shadow: universal.$set_box_shadow;
+        width: min(270px, 90%);
+        // width: min(70%, 90%);
+        height: auto;
+    }
+}
+
+.blk_info {
+    /*
+    Display settings
+    
+    NOTE(s)
+    - 
+    */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr .1fr;
+
+    * {
+        text-align: justify;
+    }
+
+    #key {
+
+        /*
+        Contains following info
+        - Release year
+        - Album title
+        */
+        .headline,
+        #year {
+            margin: 0;
+            padding: 0;
+        }
+
+        // Display settings
+        display: block;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: universal.$width_screen_limit) {
+    .grid_info {
+        grid-template-rows: repeat(2, .1fr);
+        row-gap: $size_gap_row;
+    }
+    .headline, #year {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: universal.$width_screen_limit) {
+    .grid_info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
