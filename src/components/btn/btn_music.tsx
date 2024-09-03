@@ -21,13 +21,13 @@ const Btn_Music = (props: Arguments) => {
         if (!(props.link.length >= 1)) {
             return (
                 <div className={styles.btn_link} id={styles.soon}>
-                    <p>Coming Soon</p>
+                    <p>Soon</p>
                 </div>
             )
         } else {
             return (
                 <Link target="_blank" href={props.link} className={styles.btn_link} id={styles.live}>
-                    <p>Stream Here!</p>
+                    <p>Play It!</p>
                 </Link>
             )
         }

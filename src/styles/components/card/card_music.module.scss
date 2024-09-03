@@ -115,6 +115,9 @@ $size_gap_row: 16px;
         display: block;
         height: auto;
     }
+    #description{
+        font-size: 11pt;
+    }
 }
 
 @media screen and (max-width: universal.$width_screen_limit) {
