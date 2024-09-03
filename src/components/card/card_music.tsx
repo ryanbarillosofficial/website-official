@@ -11,7 +11,7 @@ import Btn_Music from '@/components/btn/btn_music'
 const music = {
     year: 2024,
     title: "Thou Never Leavest",
-    description: "These are songs on how God never leaves us on our own. But in His love, He remains at work in this broken world to change our lives and free us from the curse of sin, so that we will all return to Him and praise Him in His glory!",
+    description: "These are songs on how God never leaves us on our own. For in His love, He remains at work in this broken world to free us from the curse of sin, so that we will all return to Him and praise Him in His glory!",
     songs: [
         { "number": 1, "title": "Thou Never Leavest", "link": "" },
         { "number": 2, "title": "As Good as Dead (My Child, Hold on)", "link": "https://distrokid.com/hyperfollow/ryanbarillos/as-good-as-dead-my-child-hold-on" },
